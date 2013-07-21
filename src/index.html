@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>AFD-Calendar</title>
+    <link rel="stylesheet" href="css/jquery.jCalendar.css"/>
+</head>
+<body>
+<div id="scroller"/>
+</div>
+</body>
+<script src="../libs/jQuery/jquery-2.0.2.min.js"></script>
+<script src="jquery.jCalendar.js"></script>
+<script>
+    $("#scroller").calendar().setMark([ "2013-6-6", "2013-7-12", "2013-7-15" ])
+            .addMark("2013-7-13").addMark("2013-7-19").delMark("2013-7-13")
+            .setCalendarFn(function () {
+                console.log(this)
+            });
+</script>
+</html>
